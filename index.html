@@ -14,10 +14,11 @@
         /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
             color: #333;
             line-height: 1.6;
             transition: all 0.3s ease;
+            padding: 0;
         }
 
         /* Hero Section */
@@ -33,6 +34,7 @@
             text-align: center;
             color: white;
             animation: fadeIn 2s ease-out;
+            padding: 0 20px;
         }
 
         header h1 {
@@ -66,6 +68,7 @@
             border-collapse: collapse;
             margin: 30px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
         }
 
         th, td {
@@ -75,7 +78,7 @@
         }
 
         th {
-            background-color: #4CAF50;
+            background-color: #2196F3;
             color: white;
         }
 
@@ -95,6 +98,7 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 20px;
+            padding: 20px;
         }
 
         .card {
@@ -105,6 +109,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transform: scale(1);
             transition: transform 0.3s ease-in-out;
+            padding: 0 15px;
         }
 
         .card img {
@@ -126,6 +131,7 @@
         ul, ol {
             margin: 20px;
             padding-left: 30px;
+            padding-bottom: 20px;
         }
 
         ul li, ol li {
@@ -140,6 +146,16 @@
 
         ol li {
             list-style-type: decimal;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2196F3;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #2196F3;
         }
 
         /* Responsive Design */
@@ -170,6 +186,7 @@
     <p>Discover the most amazing places around the world. Find the best time to visit, top attractions, and more!</p>
 
     <!-- Table Section -->
+    <h2 class="section-title">Top Attractions & Their Best Visiting Times</h2>
     <table>
         <thead>
             <tr>
@@ -208,46 +225,48 @@
             <img src="https://www.thechinajourney.com/wp-content/uploads/2024/09/Beautiful-view-of-the-Great-Wall-of-China-at-sunset-showcasing-its-ancient-architecture-against-a-mountainous-landscape-e1725963423163.webp" alt="Great Wall">
             <div class="card-content">
                 <h3>Great Wall of China</h3>
-                <p>Visit this iconic piece of ancient history.</p>
+                <p>Visit this iconic piece of ancient history, which stretches over 13,000 miles!</p>
             </div>
         </div>
         <div class="card">
             <img src="https://img.static-kl.com/images/media/71BBFEDE-473D-4F4E-82522A2197279310" alt="Eiffel Tower">
             <div class="card-content">
                 <h3>Eiffel Tower</h3>
-                <p>One of the most romantic spots in the world.</p>
+                <p>One of the most romantic spots in the world, located in the heart of Paris.</p>
             </div>
         </div>
         <div class="card">
             <img src="https://www.solitarytraveller.com/wp-content/uploads/2020/09/grand_canyon_india.jpg" alt="Grand Canyon">
             <div class="card-content">
                 <h3>Grand Canyon</h3>
-                <p>A breathtaking natural wonder.</p>
+                <p>A breathtaking natural wonder with expansive views and a unique geology.</p>
             </div>
         </div>
         <div class="card">
             <img src="https://tierravivahoteles.com/wp-content/uploads/2020/01/BLOG-2a-1030x699.jpg" alt="Machu Picchu">
             <div class="card-content">
                 <h3>Machu Picchu</h3>
-                <p>An ancient Incan city in the mountains.</p>
+                <p>Explore the mysterious Inca city in the Peruvian Andes, hidden for centuries.</p>
             </div>
         </div>
     </div>
 
     <!-- Unordered List (Things to Do) -->
+    <h2 class="section-title">Things to Do in These Destinations</h2>
     <ul>
-        <li>Visit local landmarks</li>
-        <li>Try local cuisine</li>
-        <li>Go hiking or trekking</li>
-        <li>Take guided city tours</li>
+        <li>Visit the historical landmarks such as the Great Wall and Eiffel Tower.</li>
+        <li>Try local cuisines like Peking duck in Beijing or croissants in Paris.</li>
+        <li>Go hiking or trekking in natural wonders like the Grand Canyon and Machu Picchu.</li>
+        <li>Take guided city tours to learn about the history and culture of each place.</li>
     </ul>
 
     <!-- Ordered List (Top Attractions) -->
+    <h2 class="section-title">Top 4 Must-See Attractions</h2>
     <ol>
-        <li>Great Wall of China</li>
-        <li>Eiffel Tower</li>
-        <li>Grand Canyon</li>
-        <li>Machu Picchu</li>
+        <li>Great Wall of China - A marvel of ancient engineering.</li>
+        <li>Eiffel Tower - A symbol of romance and elegance.</li>
+        <li>Grand Canyon - A massive, stunning natural landmark.</li>
+        <li>Machu Picchu - A hidden gem of the Inca civilization.</li>
     </ol>
 </body>
 </html>
