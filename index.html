@@ -3,208 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Berlin</title>
+    <title>Travel Destinations</title>
     <style>
-        /* Basic Page Styles */
-        body {
-            font-family: Arial, sans-serif;
+        /* Resetting some default styling */
+        body, h1, p, table, ul, ol {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
 
-        /* Header Section */
-        .header {
-            background-color: #0044cc;
-            color: white;
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        header {
+            position: relative;
+            height: 500px;
+            background-image: url('https://media.cntraveler.com/photos/6090755e0a033bd816c44937/16:9/w_5616,h_3159,c_limit/Zurich_GettyImages-451614321.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 50px;
-            border-bottom: 5px solid #333;
+            color: white;
             animation: fadeIn 2s ease-out;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 3rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        header h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
         /* Paragraph Section */
         p {
-            font-size: 1.2rem;
-            line-height: 1.8;
             text-align: center;
+            font-size: 18px;
+            margin: 20px;
+            line-height: 1.8;
             padding: 20px;
-            font-family: 'Verdana', sans-serif;
             color: #555;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        /* Table Section */
+        /* Table Styling */
         table {
-            width: 80%;
-            margin: 40px auto;
+            width: 100%;
             border-collapse: collapse;
-            animation: fadeInUp 1.5s ease-out;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 12px;
+        th, td {
+            padding: 15px;
             text-align: left;
+            border: 1px solid #ddd;
         }
 
-        table th {
-            background-color: #0044cc;
+        th {
+            background-color: #4CAF50;
             color: white;
         }
 
-        table tr:nth-child(even) {
-            background-color: #f2f2f2;
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
 
-        table tr:hover {
-            background-color: #ddd;
+        tr:hover {
+            background-color: #e1f5e1;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
         }
 
-        /* List Styles */
+        /* Card-like Design for Destinations */
+        .destination-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* List Styling */
         ul, ol {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 20px;
+            padding-left: 30px;
         }
 
-        ul {
+        ul li, ol li {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Custom Bullet Styles */
+        ul li {
             list-style-type: square;
         }
 
-        ol {
+        ol li {
             list-style-type: decimal;
         }
 
-        li {
-            margin-bottom: 10px;
-            color: #333;
-            font-size: 1.1rem;
-        }
-
-        li:hover {
-            color: #0044cc;
-            transition: color 0.3s ease;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
             }
-            to {
-                opacity: 1;
-            }
-        }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
+            .destination-cards {
+                flex-direction: column;
+                align-items: center;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .card {
+                width: 100%;
+                max-width: 300px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Hero Section -->
+    <header>
+        <h1>Explore Beautiful Destinations</h1>
+    </header>
 
-    <!-- Header Section -->
-    <div class="header">
-        <h1>Discover Berlin</h1>
-    </div>
-
-    <!-- Paragraph Section -->
-    <p>
-        Berlin, the capital city of Germany, is known for its rich history, vibrant culture, and cutting-edge art scene. 
-        From the Berlin Wall to the Brandenburg Gate, Berlin offers a fascinating mix of modern attractions and historical landmarks.
-        It is a city of transformation, offering something for every type of traveler.
-    </p>
+    <!-- Description Section -->
+    <p>Discover the most amazing places around the world. Find the best time to visit, top attractions, and more!</p>
 
     <!-- Table Section -->
     <table>
-        <tr>
-            <th>Attraction</th>
-            <th>Best Time to Visit</th>
-            <th>Famous For</th>
-        </tr>
-        <tr>
-            <td>Brandenburg Gate</td>
-            <td>Spring & Summer</td>
-            <td>Historical Landmark</td>
-        </tr>
-        <tr>
-            <td>Berlin Wall Memorial</td>
-            <td>Year-Round</td>
-            <td>History & Culture</td>
-        </tr>
-        <tr>
-            <td>Reichstag Building</td>
-            <td>Spring & Fall</td>
-            <td>Architecture & Politics</td>
-        </tr>
-        <tr>
-            <td>Berlin Cathedral</td>
-            <td>All Year</td>
-            <td>Baroque Architecture</td>
-        </tr>
-        <!-- New Destinations Added -->
-        <tr>
-            <td>Tiergarten Park</td>
-            <td>Spring & Summer</td>
-            <td>Green Space & Relaxation</td>
-        </tr>
-        <tr>
-            <td>Pergamon Museum</td>
-            <td>Year-Round</td>
-            <td>Ancient Artifacts</td>
-        </tr>
-        <tr>
-            <td>East Side Gallery</td>
-            <td>Spring & Summer</td>
-            <td>Street Art</td>
-        </tr>
-        <tr>
-            <td>Charlottenburg Palace</td>
-            <td>Spring & Summer</td>
-            <td>Royal History</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Attraction</th>
+                <th>Best Time to Visit</th>
+                <th>Famous For</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Great Wall of China</td>
+                <td>Spring & Fall</td>
+                <td>Ancient Architecture</td>
+            </tr>
+            <tr>
+                <td>Eiffel Tower</td>
+                <td>Spring</td>
+                <td>Romantic Views</td>
+            </tr>
+            <tr>
+                <td>Grand Canyon</td>
+                <td>Summer & Fall</td>
+                <td>Natural Wonders</td>
+            </tr>
+            <tr>
+                <td>Machu Picchu</td>
+                <td>April to October</td>
+                <td>Ancient Inca Ruins</td>
+            </tr>
+        </tbody>
     </table>
 
-    <!-- Unordered List Section -->
+    <!-- Card-like Layout for Destinations -->
+    <div class="destination-cards">
+        <div class="card">
+            <img src="https://www.thechinajourney.com/wp-content/uploads/2024/09/Beautiful-view-of-the-Great-Wall-of-China-at-sunset-showcasing-its-ancient-architecture-against-a-mountainous-landscape-e1725963423163.webp" alt="Great Wall">
+            <div class="card-content">
+                <h3>Great Wall of China</h3>
+                <p>Visit this iconic piece of ancient history.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.static-kl.com/images/media/71BBFEDE-473D-4F4E-82522A2197279310" alt="Eiffel Tower">
+            <div class="card-content">
+                <h3>Eiffel Tower</h3>
+                <p>One of the most romantic spots in the world.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.solitarytraveller.com/wp-content/uploads/2020/09/grand_canyon_india.jpg" alt="Grand Canyon">
+            <div class="card-content">
+                <h3>Grand Canyon</h3>
+                <p>A breathtaking natural wonder.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://tierravivahoteles.com/wp-content/uploads/2020/01/BLOG-2a-1030x699.jpg" alt="Machu Picchu">
+            <div class="card-content">
+                <h3>Machu Picchu</h3>
+                <p>An ancient Incan city in the mountains.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Unordered List (Things to Do) -->
     <ul>
-        <li>Walk through the Brandenburg Gate</li>
-        <li>Explore Berlin's street art scene</li>
-        <li>Visit the Berlin Wall Memorial</li>
-        <li>Relax at Tiergarten Park</li>
-        <li>Check out the modern art scene at the Berlinische Galerie</li>
-        <li>Enjoy German sausages and pretzels at local beer gardens</li>
-        <li>Take a boat tour along the River Spree</li>
+        <li>Visit local landmarks</li>
+        <li>Try local cuisine</li>
+        <li>Go hiking or trekking</li>
+        <li>Take guided city tours</li>
     </ul>
 
-    <!-- Ordered List Section -->
+    <!-- Ordered List (Top Attractions) -->
     <ol>
-        <li>Brandenburg Gate</li>
-        <li>Berlin Wall Memorial</li>
-        <li>Reichstag Building</li>
-        <li>Berlin Cathedral</li>
-        <li>Tiergarten Park</li>
-        <li>Pergamon Museum</li>
-        <li>East Side Gallery</li>
-        <li>Charlottenburg Palace</li>
+        <li>Great Wall of China</li>
+        <li>Eiffel Tower</li>
+        <li>Grand Canyon</li>
+        <li>Machu Picchu</li>
     </ol>
-
 </body>
 </html>
 
